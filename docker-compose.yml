@@ -1,0 +1,17 @@
+version: "3"
+services:
+  jupyter:
+    image: jupyter/datascience-notebook
+    volumes:
+      - ./src:/home/jovyan/volume
+      - ./.jupyter:/home/jovyan/.jupyter
+    ports:
+      - "8888:8888"
+      - "4040:4040"
+      - "4041:4041"
+      - "4042:4042"
+      - "4043:4043"
+      - "4044:4044"
+      - "4045:4045"
+    # environment:
+    #   JUPYTER_ENABLE_LAB: 'yes'
